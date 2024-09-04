@@ -1,4 +1,5 @@
 import styles from './styles.module.scss'
+import Image from 'next/image';
 
 interface HeroProps{
     heading: string;
@@ -23,7 +24,14 @@ export function Hero({heading, bannerUrl, buttonTitle, buttonUrl}: HeroProps){
             </div>
 
             <div className={styles.contentBanner}>
-
+                <Image
+                className={styles.banner}
+                    alt={heading}
+                    src={bannerUrl}
+                    priority={true}
+                    quality={100}
+                    fill={true}
+                />
             </div>
         </main>
     )
