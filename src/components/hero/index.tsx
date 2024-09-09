@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import styles from './styles.module.scss'
 import Image from 'next/image';
 
@@ -6,9 +7,10 @@ interface HeroProps{
     buttonUrl: string;
     buttonTitle: string;
     bannerUrl: string;
+    icon: ReactNode
 }
 
-export function Hero({heading, bannerUrl, buttonTitle, buttonUrl}: HeroProps){
+export function Hero({heading, bannerUrl, buttonTitle, buttonUrl, icon}: HeroProps){
     return(
         <main className={styles.main}>
             <div className={styles.containerHero}>
@@ -19,6 +21,7 @@ export function Hero({heading, bannerUrl, buttonTitle, buttonUrl}: HeroProps){
                 href={buttonUrl}
                 className={styles.link}
                 >
+                    {icon}
                     {buttonTitle}
                 </a>
             </div>

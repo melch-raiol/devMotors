@@ -24,6 +24,23 @@
     font-weight: bold;
 }
 
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background-color: #30b700;
+    border-radius: 8px;
+    padding: 8px 24px;
+    color: #FFF;
+    font-weight: medium;
+    transition: all 0.5s;
+}
+
+.link:hover{
+    transform: scale(1.09);
+}
+
 .contentBanner{
     background-color: #000;
     position: relative;
@@ -37,4 +54,11 @@
     position: relative;
     opacity: 0.30;
     background: fixed;
+}
+
+@media (min-width: 640px) {
+    .title{
+        font-size: 40px;
+        max-width: 600px;
+    }
 }
